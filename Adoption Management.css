@@ -1,0 +1,93 @@
+body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 70px 20px 20px;
+            background-color: #f2f2f2;
+            display: flex;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #ff5733;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        
+        .main-content {
+            margin-left: 220px;
+            flex-grow: 1;
+            position: relative;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .actions button, .approve-button {
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .actions button:hover, .approve-button:hover {
+            background-color: #c44127;
+        }
+        .input-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .input-fields input {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .request-button {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .request-list {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 40px;
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 101;
+        }
+        .pet-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }

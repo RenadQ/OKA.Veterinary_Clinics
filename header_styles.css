@@ -1,0 +1,150 @@
+/* <!-- ===============================
+//    Author:
+//    Renad Alkahtani
+// database connection with error handling 
+//    ===============================  --> */
+
+body {
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0; /* إزالة الهوامش الافتراضية */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 96%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.header-space {
+    height: 80px; /* لترك مساحة تحت الرأس الثابت */
+}
+
+.logo a {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff5733;
+    text-decoration: none;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff5733;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.username {
+    font-weight: 500;
+    color: #333;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 140px;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.toggle-lang, .sign-in {
+    background: none;
+    color: #ff5733;
+    padding: 8px 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-decoration: none; /* إضافة لتنسيق الزر */
+}
+
+.toggle-lang:hover, .sign-in:hover {
+    color: #c44127;
+}
+.bag-icon {
+    width: 40px; /* عرض ثابت */
+    height: 40px; /* ارتفاع ثابت */
+    object-fit: contain; /* يضمن أن الصورة تملأ الإطار بشكل متناسب */
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .header-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

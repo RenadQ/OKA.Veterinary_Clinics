@@ -1,0 +1,84 @@
+.main-content {
+    position: relative;
+    padding: 20px;
+    margin-left: 220px;  /* عرض السايدبار */
+    margin-top: 70px;    /* ارتفاع الهيدر */
+    width: calc(100% - 220px);
+    box-sizing: border-box;
+    height: calc(100vh - 70px);
+    overflow-y: auto; /* السماح بالتمرير عند الحاجة */
+}
+
+/* تنسيق النموذج */
+form {
+    width: 100%; /* جعل العرض 100% */
+    max-width: 1100px; /* ضبط العرض الأقصى للنموذج */
+    margin: 20px auto; /* موازنة المسافات */
+    background: white;
+    padding: 20px; /* زيادة الحشوة */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* عناصر النموذج */
+input, textarea, select, button {
+    padding: 10px; /* زيادة الحشوة قليلاً */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 98%; /* ضمان عرض 100% */
+    margin-bottom: 10px; /* تقليل المسافة بين العناصر */
+}
+
+/* تنسيق الزر */
+button {
+    background: #ff5733;
+    color: white;
+    cursor: pointer;
+    font-size: 16px; /* زيادة حجم الخط */
+}
+
+button:hover {
+    background: #c44127;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px; /* إضافة مسافة بين النموذج والجدول */
+}
+
+th, td {
+    padding: 10px; /* زيادة الحشوة */
+    text-align: center; /* محاذاة النص في الوسط */
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #333;
+}
+
+/* تنسيق أزرار الجدول */
+td button, td .delete-btn {
+    background-color: #ff5733; /* لون الخلفية */
+    color: white; /* لون النص */
+    border: none; /* بدون حدود */
+    padding: 10px; /* ضبط الحشوة */
+    font-size: 14px; /* حجم الخط */
+    border-radius: 4px; /* زوايا مستديرة */
+    cursor: pointer; /* تغيير المؤشر عند المرور */
+    transition: background-color 0.3s ease; /* تأثير التحول عند التمرير */
+    width: 80px; /* ضبط عرض ثابت للأزرار */
+    text-align: center; /* محاذاة النص في الوسط */
+}
+
+td .delete-btn {
+    background-color: #dc3545; /* لون الخلفية لزر الحذف */
+}
+
+td .delete-btn:hover {
+    background-color: #c82333; /* لون الخلفية عند التمرير */
+}

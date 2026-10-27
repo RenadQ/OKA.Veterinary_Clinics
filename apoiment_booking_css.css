@@ -1,0 +1,228 @@
+ body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); 
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #003366;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .doctor-card, .booking-card, .info-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .doctor-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .doctor-bio {
+            font-size: 14px;
+            color: #555;
+            text-align: justify;
+            margin-top: 10px;
+        }
+
+        .currency-icon {
+            width: 16px; 
+            height: 16px;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        .calendar-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .date {
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            border: 2px solid #003366;
+            color: #003366;
+            background: white;
+            transition: 0.3s;
+        }
+
+        .date:hover, .date.selected {
+            background: #003366;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .time-slots {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .time-slot {
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid #003366;
+            color: #003366;
+            background: white;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .time-slot:hover, .time-slot.selected {
+            background: #003366;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .input-container label {
+            font-weight: bold;
+            width: 30%;
+        }
+
+        .input-container input {
+            width: 65%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .input-container.gender-container {
+            display: flex;
+            align-items: center;
+            justify-content: start; 
+            gap: 10px;
+        }
+
+        .gender-options {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .gender-options input {
+            margin: 0;
+        }
+
+        .confirm-btn {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+            background: #003366;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .confirm-btn:hover {
+            background: #0055aa;
+            transform: scale(1.05);
+        }
+		.out-of-range-box {
+    width: 100%;
+    background: #fff0f0;
+    border: 2px solid #ff4d4d;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.out-of-range-box p {
+    color: #cc0000;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.out-of-range-box button {
+    padding: 10px 20px;
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.doctor-details {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.doctor-details h2 {
+    color: #003366;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.doctor-details p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.doctor-details .specialty {
+    font-weight: bold;
+    color: #444;
+    font-size: 18px;
+}
+
+.doctor-details .working-hours {
+    color: #003366;
+    font-weight: bold;
+    margin-top: 5px;
+}

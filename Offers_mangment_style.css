@@ -1,0 +1,343 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6; /* Light background */
+    color: #333;
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack header and content vertically */
+    padding-top: 35px; /* Add padding to avoid header overlap */
+}
+
+/* Header */
+header {
+    background: #f04e30; /* Store color */
+    color: white;
+    padding: 15px;
+    display: flex; /* Flex for alignment */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items vertically */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+/* Profile */
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px; /* Space between image and name */
+}
+
+.dropdown {
+    position: relative; /* Ensure the dropdown container is the reference */
+    display: inline-block; /* Keep it aligned properly */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%; /* Center dropdown */
+    transform: translateX(-50%); /* Shift it back by half its width */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 4px;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show on hover */
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+/* Dropdown Positioning */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 100%; /* Center dropdown */
+    transform: translateX(-50%); /* Shift it back by half its width */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 4px;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+/* Ensure it fits within the viewport on small screens */
+@media (max-width: 500px) {
+    .dropdown-content {
+        left: auto; /* Remove the centering */
+        right: 0;  /* Align it to the right side */
+        transform: none; /* Remove the translateX for small screens */
+    }
+}
+
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background: #f9f9f9; /* Light sidebar background */
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    position: fixed;
+    top: 70px; /* Below the header */
+    height: calc(100% - 70px);
+    overflow-y: auto; /* Scroll if content exceeds */
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: rgba(255, 87, 51, 0.1); /* Light hover effect */
+}
+
+.sidebar ul li a.active {
+    background: #ff5733; /* Active page color */
+    color: white; /* Active text color */
+}
+
+/* Container */
+.container {
+    margin-left: 220px; /* Space for sidebar */
+    max-width: 1200px;
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.filters select, .filters input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Buttons */
+.add-offer-btn {
+    background-color: #e1a902;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px 0;
+}
+
+.add-offer-btn:hover {
+    background-color: #d7a201;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 600px;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.toast {
+    position: fixed;
+    top: 30px; /* Change this to top */
+    right: 30px;
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 3000;
+    pointer-events: none;
+    transform: translateY(-20px); /* Adjusted for top placement */
+    font-size: 14px;
+    max-width: 300px;
+}
+
+/* تظهر عند تفعيل التوست */
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast.success {
+    background-color: #28a745;
+}
+.toast.error {
+    background-color: #dc3545;
+}
+
+
+/* .close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+} */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+/* Form Groups */
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #e04d2a;
+}
+
+/* Action Buttons */
+.action-buttons button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Days Left */
+.days-left {
+    font-weight: bold;
+}
+
+.valid {
+    color: green;
+}
+
+.expired {
+    color: red;
+}

@@ -1,0 +1,150 @@
+		
+		.L1 {
+            font-weight: bold;
+            font-size: 20px;
+            color: #ff5733;
+        }
+
+		h1 {
+			font-size: 2em; /* Header font size */
+			color: #ff5733;
+			margin: 0;
+		}
+		.join-group-button {
+            background-color: #0055aa; 
+            color: white;
+            padding: 6px 12px; 
+            border: none;
+            border-radius: 5px; 
+            font-size: 0.9em; 
+            font-weight: bold;
+            display: inline-block; 
+            margin-bottom: 10px; 
+        }
+        .new-home-button {
+            background-color: #0055aa; 
+            color: white;
+            padding: 4px 10px; 
+            border: none;
+            border-radius: 5px; 
+            font-size: 0.9em; 
+            font-weight: bold;
+            display: inline-block; 
+            width: fit-content; 
+        }
+        .content-container {
+            display: flex;
+            padding: 20px;
+        }
+        .image-container {
+            flex: 1; 
+            display: flex;
+            justify-content: flex-start;
+        }
+        .image-container img {
+            max-width: 60%; 
+            height: auto;
+            border-radius: 10px;
+        }
+        .text-container {
+            flex: 1; 
+            text-align: right; 
+            padding-left: 20px; /* Add some space between image and text */
+        }
+        .meet-our-pets {
+            margin-top: 20px;
+            text-align: center; /* Center the heading */
+			color: #ff5733;
+        }
+        .pet-list {
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center the pet cards */
+            flex-wrap: wrap; /* Allow wrapping to the next line */
+        }
+        .pet-card {
+            position: relative;
+            margin: 20px;
+            display: inline-block;
+            width: 300px; /* Set a fixed width for the pet cards */
+        }
+        .pet-card img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .pet-card:hover img {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+        .overlay {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .pet-card:hover .overlay {
+            opacity: 1; /* Show overlay on hover */
+        }
+
+		.pet-card button {
+			position: relative;
+			left: 44%;
+			transform: translateX(-50%);
+		}
+		button {
+            background-color: #ff5733; 
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em; 
+            cursor: pointer;
+        }
+		.apply-button {
+			background-color: #ff5733; /* Orange background */
+			color: white; /* White text color */
+			padding: 10px 15px; /* Padding for spacing */
+			border: none; /* No border */
+			border-radius: 5px; /* Rounded corners */
+			font-size: 1em; /* Font size */
+			cursor: pointer; /* Pointer cursor on hover */
+			transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+			text-align: center; /* Center text */
+			display: inline-block; /* Ensure button layout */
+		}
+
+		.apply-button:hover {
+			background-color: #e64a19; /* Darker orange on hover */
+		}
+
+		.apply-button:focus {
+			outline: none; /* Remove focus outline */
+		}
+		@media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .header-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+          
+
+        }

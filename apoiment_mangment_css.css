@@ -1,0 +1,163 @@
+       
+
+        main {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); 
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+   margin-bottom: 20px;
+   font-size: 28px;
+   color: #003366;
+   text-align: center;
+}
+body {
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 10px;
+        }
+
+        .tabs a {
+            background: #003366;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .tabs a:hover {
+            background: #002244;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        #active:target, #previous:target {
+            display: block;
+        }
+
+        .tab-content:first-of-type {
+            display: block;
+        }
+#appointments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+        .appointment-card {
+            display: flex;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+            align-items: center;
+            text-align: left;
+			width: 100%;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .appointment-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .reschedule-btn, .review-btn {
+            background: #003366;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .reschedule-btn:hover, .review-btn:hover {
+            background: #002244;
+        }
+
+        .cancel-btn {
+    background: #dc3545;  
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cancel-btn:hover {
+    background: #c82333;  
+}
+.branch-select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    color: #003366;
+    font-weight: bold;
+    cursor: pointer;
+}
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.cancel-btn {
+    background: #dc3545;  
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.cancel-btn:hover {
+    background: #c82333;  
+}
+
+#popup-cancel > div {
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+}
+
+#popup-cancel.show > div {
+    transform: scale(1);
+}
+

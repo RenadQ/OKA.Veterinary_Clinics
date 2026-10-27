@@ -1,0 +1,50 @@
+body { margin: 0; display: flex; font-family: 'Arial', sans-serif; background-color: #f4f4f4; height: 100vh; color: #333; }
+        #sidebar {
+            display: flex; flex-direction: column; justify-content: space-between;
+            height: 100vh; width: 300px; background-color: #293055; color: white; padding: 20px;
+        }
+        #content {
+            flex-grow: 1; padding: 30px; background-color: white; box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto; border-radius: 8px;
+        }
+        h2 { text-align: center; margin-bottom: 20px; font-size: 24px; }
+        .tabs { display: flex; justify-content: space-around; margin: 20px 0; border-bottom: 2px solid #E75D50; }
+        .tab {
+            padding: 12px 20px; background-color: transparent; color: #E75D50;
+            border: none; border-bottom: 2px solid transparent; cursor: pointer; transition: all 0.3s;
+        }
+        .tab:hover { color: #c94f40; }
+        .tab.active { border-bottom: 2px solid #E75D50; font-weight: bold; }
+        .tab-content { display: none; margin-top: 20px; }
+        .tab-content.active { display: block; }
+        .list ul { list-style-type: none; padding: 0; }
+        .list li {
+            background: #f9f9f9; margin: 5px 0; padding: 10px; border-radius: 5px; cursor: pointer;
+        }
+        .back-button {
+            padding: 10px 15px; background-color: rgba(255, 165, 0, 0.9); color: white; border: none;
+            border-radius: 5px; cursor: pointer; transition: background 0.3s; margin-top: 20px;
+        }
+        .back-button:hover { background-color: rgba(255, 140, 0, 1); }
+        .branch-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.branch-card {
+    background-color: #453957;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.branch-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    cursor: default;
+}

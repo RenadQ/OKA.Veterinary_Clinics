@@ -1,0 +1,232 @@
+      
+        
+        section.hero {
+            width: 100%;
+            height: 400px; 
+            position: relative;
+            overflow: hidden;
+        }
+        section.hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('back.jpg');
+            background-size: cover; 
+            background-position: center; 
+            z-index: 1;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%); 
+            text-align: left; 
+            color: black; 
+            z-index: 2;
+        }
+        
+        .search-section {
+            padding: 10px;
+            text-align: center;
+        }
+        .go-to-shop {
+            margin: 10px auto 20px;
+            padding: 6px 10px;
+            font-size: 12px;
+            background: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+            text-align: center;
+            display: block;
+            width: fit-content; 
+        }
+        .go-to-shop:hover {
+            background: #c44127;
+            transform: scale(1.05);
+        }
+        h2 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #003366;
+            text-align: center;
+        }
+        .new-arrivals-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .new-arrival-card {
+            text-align: center;
+            flex: 0 0 30%;
+            margin: 10px;
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+            background-color: white;
+            cursor: pointer; 
+        }
+        .new-arrival-card img {
+            width: 100%; 
+            height: auto;
+            max-height: 120px; 
+            object-fit: contain; 
+            margin-bottom: 10px;
+        }
+        .new-arrival-card h3 {
+            margin: 8px 0;
+            font-size: 16px;
+            color: #333;
+        }
+        .new-arrival-card p {
+            font-size: 14px;
+            color: #777;
+        }
+        .services-section-home {
+            width: 100%; 
+            overflow: hidden; 
+            margin-bottom: 20px;
+            position: relative; 
+        }
+        .services-container {
+      display: flex;
+      white-space: nowrap;
+      animation: scroll 60s linear infinite; /* slow time */
+      width: max-content;
+    }
+        .service-home-card {
+            text-align: center;
+            width: 250px;
+            margin: 10px;
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            transition: transform 0.2s;
+            display: inline-block; 
+        }
+        .service-home-card img {
+            width: 100%; 
+            height: auto;
+            max-height: 120px; 
+            object-fit: contain; 
+            margin-bottom: 10px;
+        }
+        .service-home-card h3 {
+            margin: 8px 0;
+            font-size: 16px;
+            color: #333;
+        }
+        .service-home-card p {
+            font-size: 14px;
+            color: #777;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+        .video-card {
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .video-card:hover {
+            transform: scale(1.05);
+        }
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+        }
+        .video-card h3 {
+            padding: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+        .adopt-home-section {
+            background-image: url('AdobtYourPet.png');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            padding: 30px;
+            text-align: right;
+            display: flex; 
+            justify-content: flex-end; 
+            align-items: flex-end; 
+            position: relative; 
+        }
+        .join-group {
+            padding: 10px 20px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            display: inline-block; 
+            margin: 20px; 
+        }
+        /* Cookie Consent Box */
+        .wrapper {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            max-width: 365px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            z-index: 1000;
+        }
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .item {
+            background: #ff7533; 
+            color: white;
+            border: none;
+            padding: 12px 20px; 
+            border-radius: 5px;
+            cursor: pointer;
+            flex: 1; 
+            min-width: 120px; 
+            transition: background 0.3s, transform 0.2s; 
+            font-size: 16px; 
+        }
+        .item:hover {
+            background: #e66126; 
+            transform: scale(1.05); 
+        }
+        .hide {
+            display: none;
+        }

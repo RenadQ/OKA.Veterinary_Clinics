@@ -1,0 +1,197 @@
+
+    
+
+    /* Modal */
+.modal {
+  position: fixed;
+  z-index: 10000; 
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 40px 20px;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Close button inside modal */
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Order details section inside modal */
+.order-details {
+  margin-bottom: 20px;
+}
+
+.order-details div {
+  padding: 5px;
+  font-size: 16px;
+}
+
+/* Dashboard for order counts */
+.dashboard {
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dashboard div {
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  flex: 1 1 18%;
+}
+
+.dashboard div span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Search and filter styles */
+.search-bar,
+.status-filter {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+th {
+  background-color: #ff5733;
+  color: white;
+}
+
+/* Action buttons inside table cells */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Action buttons */
+.received-btn,
+.view-detail-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: box-shadow 0.3s;
+}
+
+.received-btn:hover,
+.view-detail-btn:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.view-detail-btn {
+  background-color: #007bff;
+}
+#successPopup {
+  display: none;
+}
+
+#successPopup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* خلفية شفافة */
+  z-index: 99999; /* أعلى من الهيدر */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+      margin-left: 20px;
+      margin-top: 20px;
+  }
+
+  table {
+      font-size: 14px;
+  }
+
+  .search-bar,
+  .status-filter {
+      max-width: 100%;
+  }
+
+  .dashboard div {
+      flex: 1 1 30%;
+      font-size: 1rem;
+  }
+
+  .modal-content {
+      width: 90%;
+  }
+
+  td.actions {
+      flex-direction: column;
+      gap: 5px;
+  }}
